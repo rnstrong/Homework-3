@@ -21,10 +21,10 @@ import re
 
 ## Write code to define your parse_counted_words function here.
 def parse_counted_words(s):
-    matches = re.findall(r"\b([0-9]+)\s([A-Za-z0-9]+)",s)
-    if matches:
+     matches = re.findall(r"\b([0-9]+)\s(.[A-Za-z0-9]+)", s)
+     if matches:
         return matches[-1]
-    return None
+     return None
 
 
 
