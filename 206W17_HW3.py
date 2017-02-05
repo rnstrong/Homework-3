@@ -1,6 +1,7 @@
 import unittest
 import re
 
+
 ## SI 206 - W17 - HW3
 ## COMMENT WITH:
 ## Your section day/time:
@@ -19,7 +20,11 @@ import re
 # parse_counted_words('101 dalmations!') should return ('101', 'dalmations') ...
 
 ## Write code to define your parse_counted_words function here.
-
+def parse_counted_words(s):
+    matches = re.findall(r"\b([0-9]+)\s([A-Za-z0-9]+)",s)
+    if matches:
+        return matches[-1]
+    return None
 
 
 
