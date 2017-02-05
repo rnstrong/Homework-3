@@ -67,7 +67,7 @@ for line in file:
     if re.findall("y$", line):
         if re.findall("SI206", line):
             pythonfile.append(line)
-            print(line)
+            
 
 python_course_paths = len(pythonfile)
 
@@ -77,6 +77,18 @@ python_course_paths = len(pythonfile)
 
 ## (d) Write Python code to determine how many of these paths describe a Microsoft file (a file that EITHER ends with .docx OR .xlsx, but nothing else counts) where the file name ends in a digit. Save that total in the variable microsoft_files_num.
 
+file = open('computer_paths.txt')
+microsoft = []
+
+for line in file:
+    line = line.rstrip()
+    if re.findall("[0-9].docx", line):
+        microsoft.append(line)
+        
+    elif re.findall("[0-9].xlsx", line):
+        microsoft.append(line)
+    
+microsoft_files_num = len (microsoft)
 
 
 
